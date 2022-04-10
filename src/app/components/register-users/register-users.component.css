@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: right;
+}
+
+.imagen {
+    width: calc(100% - 600px);
+    min-height: 100vh;
+    position: relative;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.imagen .imagen-opacidad {
+    width: 100%;
+    height: 100%;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #434343);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+}
+
+ :root {
+    --colorTextos: #49454567;
+
+}
+
+
+h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+form{
+    background: #ffffff;
+    padding: 40px 0;
+    width: 600px;
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input, select{
+    background-color: #EEEEEE;
+    color: #49454567;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+
+.grupo label{
+    color: #474b4e;
+    font-weight: bold;
+}
+input:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+
+.button{
+    background-color: #ffc107;
+    color: #000000;
+    height: 40px;
+    padding: 0 40px;
+    border: none;
+    margin-left: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background-color: #ffc107;
+    color:#ffffff ;
+}
