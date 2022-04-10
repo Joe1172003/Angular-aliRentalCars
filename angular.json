@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "aliRental"
+    }
+  },
+  "defaultProject": "aliRental",
+  "cli": {
+    "analytics": "a5412c64-a4aa-40ad-853c-b4ac3cc0bb6c"
+  }
 }
