@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    width: 100%;
+    min-height: 70px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav h2 {
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+nav h2::after {
+    content: " CARDS";
+    color: #FFC107;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav ul li:hover > a {
+    color: #FFC107;
+    transition: color 0.3s;
+}
