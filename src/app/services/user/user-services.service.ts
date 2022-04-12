@@ -43,4 +43,26 @@ export class UserServicesService {
       map(this.extractData)
     )
   }
+
+  deleteUser(){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application.json',
+      'Authorization': localStorage.getItem('tokenUsers')
+    })
+    return this.http.delete(this.endpoint + 'deleteCar', {headers: headers}).pipe(
+      map(this.extractData)
+    )
+  }
+
+  updateUsers(dataUser){
+    let params = JSON.stringify(dataUser)
+    let userId = dataUser.userId
+    let headers = new HttpHeaders({
+      'Content-Type': 'application.json',
+      'Authorization': localStorage.getItem('tokenUsers')
+    })
+    return this.http.put(this.endpoint + 'updateUser', params, this.httpOptions).pipe(
+      map(this.extractData)
+    )
+  }
 }
