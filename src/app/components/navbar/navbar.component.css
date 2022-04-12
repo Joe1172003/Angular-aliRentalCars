@@ -2,45 +2,147 @@
     margin: 0;
     padding: 0;
     letter-spacing: 2px;
-    text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+/* Nav */
 
 nav {
     width: 100%;
     min-height: 70px;
     background-color: #000000;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    z-index: 50;
+}
+
+nav .logo {
+    width: 315px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 90px;
+    margin-right: 10px;
 }
 
 nav h2 {
     color: #FFFFFF;
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
 }
 
 nav h2::after {
-    content: " CARDS";
+    content: " CARS";
     color: #FFC107;
 }
 
-nav ul {
+nav .menu {
     display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    padding: 15px 10px;
-    border-radius: 5px;
+nav .menu .opcion-1 {
+    padding: 18px 10px;
 }
 
-nav ul li a {
-    color: #FFFFFF;
-    font-size: 14px;
+nav .menu .opcion-1 .text-1,
+nav .menu .opcion-1 .text-2 {
+    font-size: 15px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-nav ul li:hover > a {
+nav .menu .opcion-1 .text-1 {
+    color: #FFFFFF;
+}
+
+nav .menu .opcion-1 .text-2 {
+    color: #FFC107;
+}
+
+nav .menu .opcion-1 .text-1:hover {
     color: #FFC107;
     transition: color 0.3s;
+}
+
+nav .menu .opcion-1 .text-2:hover {
+    color: #ffc107c4;
+    transition: color 0.3s;
+}
+
+/* Submenu */
+
+nav .menu .desplegable .submenu {
+    position: absolute;
+    margin-top: 13px;
+    width: 200px;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav .menu .desplegable .submenu .opcion-2 a {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+nav .menu .desplegable .submenu .opcion-2 a:hover {
+    color: #FFC107;
+    transition: color 0.3s;
+}
+
+nav .menu .desplegable .submenu hr {
+    margin: 10px 0;
+    background-color: #EEEEEE;
+}
+
+nav .menu .desplegable:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* Iniciar sesion y Registrarse */
+
+nav .menu .linea {
+    width: 1px;
+    height: 30px;
+    background-color: #BDBDBD;
+}
+
+nav .menu button {
+    width: 130px;
+    height: 40px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #FFC107;
+    color: #000000;
+    font-weight: bold;
+}
+
+nav .menu button:hover {
+    background-color: #FFFFFF;
+    transition: background-color 0.3s;
 }

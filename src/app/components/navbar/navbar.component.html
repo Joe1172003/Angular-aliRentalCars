@@ -1,9 +1,24 @@
 <nav>
-    <h2>ALI RENTAL</h2>
-    <ul>
-       <li><a href="#">Inicio</a></li> 
-       <li><a href="#">Acerca de</a></li> 
-       <li><a href="#">Servicios</a></li> 
-       <li><a href="#">Contacto</a></li> 
+    <div class="logo">
+        <img src="../../../assets/logo.png">
+        <h2>ALI RENTAL</h2>
+    </div>
+    <ul class="menu">
+        <li class="opcion-1"><a class="text-decoration-none text-1" routerLink="">Inicio</a></li>
+        <li class="opcion-1 desplegable">
+            <a class="text-decoration-none text-1" href="#">Servicios</a>
+            <ul class="submenu">
+                <li class="opcion-2"><a class="text-decoration-none" routerLink="/listCars">Listado de Vehiculos</a></li>
+                <hr>
+                <li class="opcion-2"><a class="text-decoration-none" routerLink="/addCar">Publicar Vehiculo</a></li>
+                <hr>
+                <li class="opcion-2"><a class="text-decoration-none" href="#">Servicio #3</a></li>
+            </ul>       
+        </li>
+        <li class="opcion-1"><a class="text-decoration-none text-1" routerLink="/update&deleteUser">Perfil</a></li>         
+        <div class="linea"></div>
+        <li class="opcion-1"><a class="text-decoration-none text-2" routerLink="/login">Iniciar sesión</a></li>
+        <button (click)="onSubmit()">Registrarse</button>
     </ul>
 </nav>
+

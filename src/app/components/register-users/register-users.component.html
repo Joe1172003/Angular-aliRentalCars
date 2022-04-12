@@ -1,52 +1,60 @@
-<body>
-    <div class="imagen">
-        <img src="../../../img/img-1.jpg" alt="">
+<main>
+    <div class="imagen">                        <!-- Imagen página principal -->     
         <div class="imagen-opacidad"></div>
-    </div> 
- <form action="" id="form">
-        <div class="form">
-            <h1>Registro Usuario</h1>
-            <div class="grupo">
-                <label for="">Nombre</label>
-                <input type="text" name="" id="name" required><span class="barra"></span>
-            </div>
-            <div class="grupo">
-                <label for="">Apellido</label>
-                <input type="text" name="" id="name" required><span class="barra"></span>
-            </div>
-            <div class="grupo">
-                <label for="">Correo</label>
-                <input type="email" name="" id="name" required><span class="barra"></span>
-            </div>
-            <div class="grupo">
-                <label for="">Usuario</label>
-                <input type="text" name="" id="name" required><span class="barra"></span>
-            </div>
-            <div class="grupo">
-                <label for="">Password</label>
-                <input type="password" name="" id="name" required><span class="barra"></span>
-            </div>
-            <div class="grupo">
-                <label for="">CUI</label>
-                <input type="text" name="" id="name" required><span class="barra"></span>
-            </div>
-            <div class="grupo">
-                <label for="">Telefono</label>
-                <input type="number" name="" id="name" required><span class="barra"></span>
-            </div>
-            <div class="grupo">
-                <label for="">Sexo</label>
-                <select>
-                    <option></option>
-                    <option value="hombre">Hombre</option>
-                    <option value="mujer">Mujer</option>
-                </select>
-            </div>
-            <div class="grupo">
-                <label for="">Fecha de Nacimiento</label>
-                <input type="date" name="" id="name" required><span class="barra"></span>
-            </div>
-            <button class="button" type="submit">Registrarse</button>
+    </div>
+
+    <form action="">                            <!-- Formulario -->                                          
+        <h1>Agregar</h1>
+
+        <div class="form-opcion">
+            <label>Nombre</label>
+                <input type="text" required>
         </div>
-    </form> 
-</body>
+
+        <div class="form-opcion">
+            <label>Apellido</label>
+                <input type="text" required>
+        </div>
+
+        <div class="form-opcion">
+            <label>Usuario</label>
+                <input type="text" required>
+        </div>
+
+        <div class="form-opcion">
+            <label>Correo</label>
+                <input type="email" required>
+        </div>
+
+        <div class="form-opcion">
+            <label>Contraseña</label>
+                <input type="password" required>
+        </div>
+
+        <div class="form-opcion">
+            <label>CUI</label>
+                <input type="number" required>
+        </div>
+
+        <div class="form-opcion">
+            <label>Telefono</label>
+                <input type="tel" required>
+        </div>
+
+        <div class="form-opcion">
+            <label>Sexo</label>
+                <select required>
+                    <option value=""></option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+        </div>
+
+        <div class="form-opcion">
+            <label>Fecha Nacimiento</label>
+                <input type="date" required>
+        </div>
+        
+        <input type="submit" value="Agregar" id="btn">
+    </form>
+</main>

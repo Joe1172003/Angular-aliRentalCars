@@ -1,0 +1,125 @@
+/* Main */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 0 0 0;
+    display: flex;
+}
+
+/* Imagen página principal */
+
+main .imagen {
+    width: calc(100% - 900px);
+    min-height: 100vh;
+    position: relative;
+    background: url('../../../assets/imgreservation.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main .imagen .imagen-opacidad {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000000, #434343);
+    opacity: 0.5;
+    position: absolute;
+}
+
+/* Formulario */
+
+main form {
+    width: 900px;
+    min-height: 100vh;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main form h1 {
+    color: #000000;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+main form h1::after {
+    content: " Vehículo";
+    color: #FFC107;
+}
+
+main form textarea {
+    width: 300px;
+    height: 200px;
+}
+
+main .form-opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+main form .form-opcion {
+    margin: 16px 18px;
+}
+
+main form .form-opcion label {
+    color: #474B4E;
+    font-weight: bold;
+    font-size: 19px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+main form .form-opcion input,
+main form .form-opcion select {
+    width: 400px;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #474B4E;
+    outline: none;
+    background-color: #EEEEEE;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+main form .botones {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main form .boton {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000000;
+    background-color: #FFC107;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+main form .boton:first-child {
+    margin-bottom: 25px;
+}
+
+main form .boton:hover {
+    color: #FFFFFF;
+    transition: color 0.3s;
+}
