@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class UserServicesService {
-  endpoint = 'http://localhost:3800/api/'
+  endpoint = 'http://localhost:3000/api/'
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -18,8 +18,9 @@ export class UserServicesService {
     let body = res;
     return body || [] || {};
   }
-
   constructor(private http: HttpClient) { }
+
+
   login(dataUser){
     let params = JSON.stringify(dataUser);
     return this.http.post(this.endpoint + 'login', params, this.httpOptions).pipe(
@@ -59,8 +60,9 @@ export class UserServicesService {
     let userId = dataUser.userId
     let headers = new HttpHeaders({
       'Content-Type': 'application.json',
-      'Authorization': localStorage.getItem('tokenUsers')
+      'authorization': localStorage.getItem('tokenUsers')
     })
+    console.log(localStorage.getItem('tokenUsers'))
     return this.http.put(this.endpoint + 'updateUser', params, this.httpOptions).pipe(
       map(this.extractData)
     )

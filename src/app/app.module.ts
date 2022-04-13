@@ -36,11 +36,13 @@ import { CarServicesService } from './services/car/car-services.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     UserServicesService,
-    CarServicesService
+    CarServicesService,
   ],
   bootstrap: [AppComponent]
 })

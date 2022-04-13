@@ -5,42 +5,42 @@
         <div class="form-opciones">
             <div class="form-opcion">
                 <label>Nombre</label>
-                    <input type="text" required>
+                    <input [(ngModel)]="user.nombre" type="text" required name="nombre">
             </div>
 
             <div class="form-opcion">
                 <label>Apellido</label>
-                    <input type="text" required>
+                    <input [(ngModel)]="user.apellido" type="text" required name="apellido">
             </div>
 
             <div class="form-opcion">
                 <label>Usuario</label>
-                    <input type="text" required>
+                    <input [(ngModel)]="user.usuario" type="text" required name="usuario">
             </div>
 
             <div class="form-opcion">
                 <label>Correo</label>
-                    <input type="email" required>
+                    <input [(ngModel)]="user.correo" type="email" required name="correo">
             </div>
 
             <div class="form-opcion">
                 <label>Contraseña</label>
-                    <input type="password" required>
+                    <input [(ngModel)]="user.password" type="password" required name="password">
             </div>
 
             <div class="form-opcion">
                 <label>CUI</label>
-                    <input type="number" required>
+                    <input [(ngModel)]="user.dpi" type="number" required name="dpi">
             </div>
 
             <div class="form-opcion">
                 <label>Telefono</label>
-                    <input type="tel" required>
+                    <input [(ngModel)]="user.telefono" type="tel" required name="telefono">
             </div>
 
             <div class="form-opcion">
                 <label>Sexo</label>
-                    <select required>
+                    <select [(ngModel)]="user.sexo" required name="sexo">
                         <option value=""></option>
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
@@ -49,13 +49,13 @@
 
             <div class="form-opcion">
                 <label>Fecha Nacimiento</label>
-                    <input type="date" required>
+                    <input [(ngModel)]="user.fechaDeNacimiento" type="date" required name="fechaDeNacimiento">
             </div>
         </div>
 
 
             <div class="botones">
-                <input type="submit" value="Modificar" class="boton" id="btn_M">
+                <input type="submit" value="Modificar" class="boton" id="btn_M" (click)="updateUser()">
                 <input type="submit" value="Eliminar"  class="boton" id="btn_E">
             </div>
        
