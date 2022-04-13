@@ -13,42 +13,44 @@
     </div>
 </section>
 
+<h1 style="text-align: center; margin-bottom: -70px; margin-top: 50px;">Publicaciones</h1>
 <section id="listar">
-    <div class="contenedor">
+    
+    <div class="contenedor" *ngFor="let car of cars" >
         <div class="imagen">
             <img src="../../../assets/imgcarh.jpg">
         </div>
         <div class="contenido">
-            <h2>Modelo</h2>
+            <h2>Modelo: {{car.modelo}}</h2>
             
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Marca:</h3>
+                <h3>Marca:{{car.marca}}</h3>
             </div>
 
             <div class="contenido-opcion">
                 <i class="bi bi-calendar-check-fill"></i>
-                <h3>Año:</h3>
+                <h3>Año:{{car.anio}}</h3>
             </div>
 
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Tipo de vehículo:</h3>
+                <h3>Tipo de vehículo: {{car.tipoDeVehiculo}}</h3>
             </div>
 
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Transmisión:</h3>
+                <h3>Transmisión: {{car.transmision}}</h3>
             </div>
 
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Tarjeta de circulación:</h3>
+                <h3>Tarjeta de circulación: {{car.tarjetaDeCirculacion}}</h3>
             </div>
 
             <div class="contenido-opcion">
                 <i class="bi bi-cash"></i>
-                <h3>Precio:</h3>
+                <h3>Precio: {{car.precio}}</h3>
             </div>
 
             <div class="contenedor-boton">
@@ -58,10 +60,11 @@
     </div>
 
     <!-- 2 -->
+    
 
 </section>
 <section id="acercade">
-    <h1>ACERCA DE</h1>
+    <h2>ACERCA DE</h2>
     <div class="contenedor">
     <div class="contenido"> 
         <h2>SEGURIDAD</h2>

@@ -10,9 +10,16 @@ export class UserServicesService {
   endpoint = 'http://localhost:3000/api/'
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     })
   }
+  httpOptionsHeaders = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('tokenUsers')
+    })
+  }
+
 
   private extractData(res: Response){
     let body = res;
@@ -57,13 +64,13 @@ export class UserServicesService {
 
   updateUsers(dataUser){
     let params = JSON.stringify(dataUser)
-    let userId = dataUser.userId
+    let userId = dataUser._id
     let headers = new HttpHeaders({
       'Content-Type': 'application.json',
       'authorization': localStorage.getItem('tokenUsers')
     })
     console.log(localStorage.getItem('tokenUsers'))
-    return this.http.put(this.endpoint + 'updateUser', params, this.httpOptions).pipe(
+    return this.http.put(this.endpoint + 'updateUser', params, this.httpOptionsHeaders).pipe(
       map(this.extractData)
     )
   }

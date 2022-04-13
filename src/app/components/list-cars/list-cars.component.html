@@ -1,39 +1,40 @@
 <body>
-    <div class="contenedor">
+    <h1>Listado De</h1>
+    <div class="contenedor" *ngFor="let car of cars">
         <div class="imagen">
             <img src="../../../assets/imglistcars.jpg">
         </div>
         <div class="contenido">
-            <h2>Modelo</h2>
+            <h2>Modelo: {{car.modelo}}</h2>
             
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Marca:</h3>
+                <h3>Marca: {{car.marca}}</h3>
             </div>
     
             <div class="contenido-opcion">
                 <i class="bi bi-calendar-check-fill"></i>
-                <h3>Año:</h3>
+                <h3>Año: {{car.anio}}</h3>
             </div>
     
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Tipo de vehículo:</h3>
+                <h3>Tipo de vehículo: {{car.tipoDeVehiculo}}</h3>
             </div>
     
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Transmisión:</h3>
+                <h3>Transmisión: {{car.transmision}}</h3>
             </div>
     
             <div class="contenido-opcion">
                 <i class="bi bi-caret-right-fill"></i>
-                <h3>Tarjeta de circulación:</h3>
+                <h3>Tarjeta de circulación: {{car.tarjetaDeCirculacion}}</h3>
             </div>
     
             <div class="contenido-opcion">
                 <i class="bi bi-cash"></i>
-                <h3>Precio:</h3>
+                <h3>Precio: {{car.precio}}</h3>
             </div>
     
             <button>Rentar</button>

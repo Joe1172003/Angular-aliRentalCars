@@ -9,6 +9,16 @@ body {
     min-height: 100vh;
 }
 
+h1{
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+h1::after{
+    content: ' Recientes';
+    color: #FFC107;
+}
+
 #home {
     width: 100%;
     min-height: 100vh;

@@ -7,12 +7,19 @@ import { map } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class CarServicesService {
-  endpoint = 'http://localhost:3800/command/';
+  endpoint = 'http://localhost:3000/vehiculos/';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   };
+
+  httpOptionsHeaders = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('tokenUsers')
+    })
+  }
 
   private extractData(res: Response){
     let body = res;
@@ -23,7 +30,7 @@ export class CarServicesService {
 
   saveCar(dataCar){
     let params = JSON.stringify(dataCar);
-    return this.http.post(this.endpoint + 'addCar', params, this.httpOptions).pipe(
+    return this.http.post(this.endpoint + 'addCar', params, this.httpOptionsHeaders).pipe(
       map(this.extractData)
     )
   }
@@ -52,6 +59,16 @@ export class CarServicesService {
       'Authorization': localStorage.getItem('tokenUsers')
     })
     return this.http.get(this.endpoint + 'listCars', {headers: headers}).pipe(
+      map(this.extractData)
+    )
+  }
+
+  getCars3():Observable<any>{
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('tokenUsers')
+    })
+    return this.http.get(this.endpoint + 'listCars3', {headers: headers}).pipe(
       map(this.extractData)
     )
   }

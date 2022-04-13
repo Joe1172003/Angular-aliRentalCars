@@ -13,31 +13,31 @@
 
         <div class="form-opcion">
             <label>Marca</label>
-                <input type="text" required>
+                <input [(ngModel)]="car.marca" type="text" required name="marca">
         </div>
 
         <div class="form-opcion">
             <label>Modelo</label>
-                <input type="text" required>
+                <input [(ngModel)]="car.modelo" type="text" required name="modelo">
         </div>
 
         <div class="form-opcion">
             <label>Año</label>
-                <input type="text" required>
+                <input [(ngModel)]="car.anio" type="text" required name="anio">
         </div>
 
         <div class="form-opcion">
             <label>Transmisión</label>
-                <select required>
+                <select [(ngModel)]="car.transmision" required name="transmision">
                     <option value=""></option>
-                    <option value="manual">Manual</option>
-                    <option value="automatico">Automático</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatico">Automático</option>
                 </select>
         </div>
 
         <div class="form-opcion">
             <label>Tipo de vehículo</label>
-                <select required>
+                <select [(ngModel)]="car.tipoDeVehiculo" required name="tipoDeVehiculo">
                     <option value=""></option>
                     <option value="sedan">Sedan</option>
                     <option value="hatchback">Hatchback</option>
@@ -47,16 +47,16 @@
 
         <div class="form-opcion">
             <label>Precio</label>
-                <input type="number" required>
+                <input [(ngModel)]="car.precio" type="number" required name="precio">
         </div>
 
         <div class="form-opcion">
             <label>Tarjeta de circulación</label>
-                <input type="text" required>
+                <input [(ngModel)]="car.tarjetaDeCirculacion" type="text" required name="tarjetaDeCirculacion">
         </div>
 
         <textarea></textarea>
 
-        <input type="submit" value="Agregar" id="btn">
+        <input type="submit" value="Agregar" id="btn" (click)="registerCar()">
     </form>
 </main>
