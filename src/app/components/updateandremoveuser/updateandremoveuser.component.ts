@@ -29,4 +29,17 @@ export class UpdateandremoveuserComponent implements OnInit {
     })
   }
 
+  deleteUser(){
+    this.userService.deleteUser().subscribe((res:any)=>{
+      if(res.message){
+        alert(res.message)
+        this.router.navigateByUrl('')
+        localStorage.clear();
+        sessionStorage.clear()
+      }else{
+        alert('Error desconocido')
+      }
+    })
+  }
+
 }

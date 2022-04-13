@@ -50,7 +50,7 @@ export class UserServicesService {
       'Content-Type': 'application.json',
       'Authorization': localStorage.getItem('tokenUsers')
     })
-    return this.http.delete(this.endpoint + 'deleteCar', {headers: headers}).pipe(
+    return this.http.delete(this.endpoint + 'deleteUser', {headers: headers}).pipe(
       map(this.extractData)
     )
   }
