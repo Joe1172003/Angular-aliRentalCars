@@ -45,12 +45,12 @@ export class CarServicesService {
     )
   }
 
-  getCar(){
+  getCar(automovilId){
     let headers = new HttpHeaders({
       'Content-Type': 'application.json',
       'Authorization': localStorage.getItem('tokenUsers')
     })
-    return this.http.get(this.endpoint + 'listCar', {headers: headers}).pipe()
+    return this.http.get(this.endpoint + 'findOneCar/' + automovilId, {headers: headers}).pipe()
   }
 
   getCars():Observable<any>{

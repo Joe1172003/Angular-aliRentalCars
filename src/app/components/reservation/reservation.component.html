@@ -9,30 +9,30 @@
         <div class="form-opciones">
             <div class="form-opcion">
                 <label>ID del vehículo</label>
-                    <input type="number" required readonly>
+                    <input [(ngModel)]="car._id" type="text" required readonly name="_id" readonly>
             </div>
 
             <div class="form-opcion">
                 <label>DPI</label>
-                    <input type="number" required>
+                    <input [(ngModel)]="user.dpi" type="text" required name="dpi" readonly>
             </div>
 
             <div class="form-opcion">
                 <label>Fecha de alquiler</label>
-                    <input type="date" required>
+                    <input [(ngModel)]="this.dayInit" type="date" required name="Fecha_Alquiler">
             </div>
 
             <div class="form-opcion">
                 <label>Fecha de retorno</label>
-                    <input type="date" required>
+                    <input [(ngModel)]="this.dayFinal" type="date" required name="Fecha_Retorno">
             </div>
 
             <div class="form-opcion">
                 <label>Monto total</label>
-                    <input type="number" required>
+                    <input [(ngModel)]="reservation.Monto_Apagar" type="number" required name="Monto_Apagar">
             </div>
         </div>
 
-       <input type="submit" value="Reservar" class="boton">
+       <input type="submit" value="Reservar" class="boton" (click)="onSubmit()">
     </form>
 </main> 

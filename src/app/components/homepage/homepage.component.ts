@@ -21,4 +21,8 @@ export class HomepageComponent implements OnInit {
       this.cars = res.vehiculosFound3
     })
   }
+
+  onSubmit(){
+    this.router.navigateByUrl('reservation')
+  }
 }

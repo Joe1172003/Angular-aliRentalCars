@@ -23,4 +23,19 @@ export class ListCarsComponent implements OnInit {
     })
   }
 
+  onSubmit(){
+    this.router.navigateByUrl('reservation')
+  }
+
+  getCar(automovilId){
+    this.carService.getCar(automovilId).subscribe((res:any) =>{
+      if(res.message){
+        alert('carro encontrado');
+        localStorage.setItem('car', JSON.stringify(res.vFound))
+        this.router.navigateByUrl('reservation')
+      }else{
+        alert('Error Desconocido')
+      }
+    })
+  }
 }
