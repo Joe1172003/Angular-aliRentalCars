@@ -19,6 +19,7 @@ import { ListCarsComponent } from './components/list-cars/list-cars.component';
 
 import { UserServicesService } from './services/user/user-services.service';
 import { CarServicesService } from './services/car/car-services.service';
+import { ReservationService } from './services/reservation/reservation.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CarServicesService } from './services/car/car-services.service';
   providers: [
     UserServicesService,
     CarServicesService,
+    ReservationService
   ],
   bootstrap: [AppComponent]
 })

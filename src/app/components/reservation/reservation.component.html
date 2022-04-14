@@ -20,17 +20,17 @@
 
             <div class="form-opcion">
                 <label>Fecha de alquiler</label>
-                    <input [(ngModel)]="this.dayInit" type="date" required name="Fecha_Alquiler">
+                    <input [(ngModel)]="reservation.Fecha_Alquiler" type="date" required name="Fecha_Alquiler">
             </div>
 
             <div class="form-opcion">
                 <label>Fecha de retorno</label>
-                    <input [(ngModel)]="this.dayFinal" type="date" required name="Fecha_Retorno">
+                    <input [(ngModel)]="reservation.Fecha_retorno" type="date" required name="Fecha_retorno">
             </div>
 
             <div class="form-opcion">
                 <label>Monto total</label>
-                    <input [(ngModel)]="reservation.Monto_Apagar" type="number" required name="Monto_Apagar">
+                    <input type="number" required name="Monto_Apagar">
             </div>
         </div>
 
