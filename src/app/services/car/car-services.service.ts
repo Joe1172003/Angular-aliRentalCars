@@ -65,8 +65,7 @@ export class CarServicesService {
 
   getCars3():Observable<any>{
     let headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': localStorage.getItem('tokenUsers')
+      'Content-Type': 'application/json'
     })
     return this.http.get(this.endpoint + 'listCars3', {headers: headers}).pipe(
       map(this.extractData)

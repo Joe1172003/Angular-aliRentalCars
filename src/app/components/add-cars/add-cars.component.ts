@@ -25,7 +25,7 @@ export class AddCarsComponent implements OnInit {
               alert(res.message)
             }else if(res.vehiculoSaved){
               alert('Nuevo Carro Registrado')
-              this.router.navigateByUrl('')
+              this.router.navigateByUrl('/home')
             }else{
               alert('Ha ocurrido un error desconocido, intentelo mas tarde')
             }

@@ -22,7 +22,7 @@ export class UpdateandremoveuserComponent implements OnInit {
     this.userService.updateUsers(this.user).subscribe((res: any)=>{
       if(res.user){
         alert('Usuario Actualizado');
-        this.router.navigateByUrl('');
+        this.router.navigateByUrl('/home');
       }else{
         alert('Usuario no actualizado, intentelo de nuevo')
       }

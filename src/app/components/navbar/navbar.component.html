@@ -4,21 +4,21 @@
         <h2>ALI RENTAL</h2>
     </div>
     <ul class="menu">
-        <li class="opcion-1"><a class="text-decoration-none text-1" routerLink="">Inicio</a></li>
+        <li class="opcion-1"><a class="text-decoration-none text-1" routerLink="/home">Inicio</a></li>
         <li class="opcion-1 desplegable">
-            <a class="text-decoration-none text-1" href="#">Servicios</a>
+            <a class="text-decoration-none text-1" routerLink="/home" *ngIf="token!=null">Servicios</a>
             <ul class="submenu">
                 <li class="opcion-2"><a class="text-decoration-none" routerLink="/listCars">Listado de Vehiculos</a></li>
                 <hr>
                 <li class="opcion-2"><a class="text-decoration-none" routerLink="/addCar">Publicar Vehiculo</a></li>
                 <hr>
-                <li class="opcion-2"><a class="text-decoration-none" href="#">Servicio #3</a></li>
-            </ul>       
+            </ul>
         </li>
-        <li class="opcion-1"><a class="text-decoration-none text-1" routerLink="/update&deleteUser">Perfil</a></li>         
+        <li class="opcion-1"><a class="text-decoration-none text-1" routerLink="/update&deleteUser" *ngIf="token!=null">Perfil</a></li>
         <div class="linea"></div>
-        <li class="opcion-1"><a class="text-decoration-none text-2" routerLink="/login">Iniciar sesión</a></li>
-        <button (click)="onSubmit()">Registrarse</button>
+        <li class="opcion-1"><a class="text-decoration-none text-2" routerLink="/login" *ngIf="token==null">Iniciar sesión</a></li>
+        <button (click)="onSubmit()" *ngIf="token==null">Registrarse</button>
+        <img *ngIf="token!=undefined" class="logout" src="../../../assets/logout.png" alt="logOut" (click)="logOut()">
     </ul>
 </nav>
 

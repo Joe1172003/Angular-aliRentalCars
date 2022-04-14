@@ -11,14 +11,15 @@ import { UpdateandremoveuserComponent } from './components/updateandremoveuser/u
 
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent},
+  {path: 'home', component: HomepageComponent},
   {path: 'registerUser', component: RegisterUsersComponent},
   {path: 'addCar', component: AddCarsComponent},
   {path: 'update&deleteCar', component: UpdateandremovecarComponent},
   {path: 'reservation', component: ReservationComponent},
   {path: 'update&deleteUser', component: UpdateandremoveuserComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'listCars', component: ListCarsComponent}
+  {path: 'listCars', component: ListCarsComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({

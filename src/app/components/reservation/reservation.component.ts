@@ -26,14 +26,14 @@ export class ReservationComponent implements OnInit {
 
 
   onSubmit(){
-    let diff = +new Date(this.dayFinal).getDay() - +new Date(this.dayInit).getDay()
+    let diff = Number(new Date(this.dayFinal).getDay()) - Number(new Date(this.dayInit).getDay())
     console.log(diff);
     this.reservationService.saveReservation(this.reservation, this.user._id).subscribe((res: any)=>{
       if(res.message){
         alert(res.message)
       }else if(res.Reservacion){
         alert('Reservacion Hecha')
-        this.router.navigateByUrl('')
+        this.router.navigateByUrl('/home')
       }else{
         alert('Ha ocurrido un error Desconocido')
       }
