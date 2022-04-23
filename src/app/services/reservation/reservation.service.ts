@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class ReservationService {
-  endpoint = 'http://localhost:3000/reserva/';
+  endpoint = 'http://localhost:3800/reserva/';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -26,5 +26,23 @@ export class ReservationService {
     return this.http.post(this.endpoint + 'reservaciones/' + idV, params, this.httpOptions).pipe(
       map(this.extractData)
     )
+  }
+
+  CrearPDF(idR){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/pdf',
+      'Authorization': localStorage.getItem('tokenUsers')
+    })
+    return this.http.get(this.endpoint + 'CrearPDF/' + idR, {headers: headers}).pipe(
+      map(this.extractData)
+    )
+  }
+
+  buscarReservacion(idR){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application.json',
+      'Authorization': localStorage.getItem('tokenUsers')
+    })
+    return this.http.get(this.endpoint + 'findOneCar/' + idR, {headers: headers}).pipe()
   }
 }

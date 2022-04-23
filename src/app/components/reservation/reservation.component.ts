@@ -14,6 +14,7 @@ export class ReservationComponent implements OnInit {
   reservation: ReservationModel
   dayInit;
   dayFinal;
+  rid;
   
   constructor(private reservationService: ReservationService, private router: Router) { 
     this.car = JSON.parse(localStorage.getItem('car'));
@@ -33,12 +34,21 @@ export class ReservationComponent implements OnInit {
         console.log(1)
         alert(res.message)
       }else if(res.Reservacion){
+        localStorage.setItem('reser', JSON.stringify(res.Reservacion._id))
         console.log(2)
         alert('Reservacion Hecha')
-        this.router.navigateByUrl('/home')
       }else{
         console.log(3)
         alert('Ha ocurrido un error Desconocido')
+      }
+    })
+  }
+
+  crearPDF(){
+    this.rid = localStorage.getItem('reser').replace(/['"]+/g,'');
+    this.reservationService.CrearPDF(this.rid).subscribe((res:any) =>{
+      if(res.message){
+        alert('PDF Generado')
       }
     })
   }
